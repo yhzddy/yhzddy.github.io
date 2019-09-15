@@ -43,6 +43,8 @@ git branch //查看分支
 
 git branch -r //查看远程的分支名
 
+git branch --set-upstream-to=<远程主机名>/<远程分支名> <本地分支名> //给该分支设置上游远程节点
+
 git checkout -b 分支名  //创建新的分支并切换过去
 
 git checkout 分支名 //切换到该分支
