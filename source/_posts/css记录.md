@@ -1,7 +1,8 @@
 ---
 title: css记录问题
 date: 2019-09-15 22:32:56
-tags: css
+tags: CSS
+categories: CSS
 thumbnail: /assets/hh.jpg
 ---
 
