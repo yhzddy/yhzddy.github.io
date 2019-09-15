@@ -7,20 +7,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>归档 - yhzddy的程序屋</title>
+<title>git推送遇到的问题 - yhzddy的程序屋</title>
 
 
-    <meta name="description" content="Standing on the shoulders of giant">
-<meta property="og:type" content="website">
-<meta property="og:title" content="yhzddy的程序屋">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+    <meta name="description" content="####github无法推送的原因  该分支与远程从分支无相关联系  1231.没给该分支设置上游远程节点    git branch --set-upstream-to=&amp;lt;远程主机名&amp;gt;/&amp;lt;远程分支名&amp;gt; &amp;lt;本地分支名&amp;gt;2.git的更新操作如果本地与远程大部分不一样，有合并冲突，需要先拉取合并，才能进行推送  ####本地分支名与远程分支名的特殊情况 #####本">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git推送遇到的问题">
+<meta property="og:url" content="http://yoursite.com/2019/09/15/git推送遇到的问题/index.html">
 <meta property="og:site_name" content="yhzddy的程序屋">
-<meta property="og:description" content="Standing on the shoulders of giant">
+<meta property="og:description" content="####github无法推送的原因  该分支与远程从分支无相关联系  1231.没给该分支设置上游远程节点    git branch --set-upstream-to=&amp;lt;远程主机名&amp;gt;/&amp;lt;远程分支名&amp;gt; &amp;lt;本地分支名&amp;gt;2.git的更新操作如果本地与远程大部分不一样，有合并冲突，需要先拉取合并，才能进行推送  ####本地分支名与远程分支名的特殊情况 #####本">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta property="og:updated_time" content="2019-09-15T07:13:52.654Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="yhzddy的程序屋">
-<meta name="twitter:description" content="Standing on the shoulders of giant">
+<meta name="twitter:title" content="git推送遇到的问题">
+<meta name="twitter:description" content="####github无法推送的原因  该分支与远程从分支无相关联系  1231.没给该分支设置上游远程节点    git branch --set-upstream-to=&amp;lt;远程主机名&amp;gt;/&amp;lt;远程分支名&amp;gt; &amp;lt;本地分支名&amp;gt;2.git的更新操作如果本地与远程大部分不一样，有合并冲突，需要先拉取合并，才能进行推送  ####本地分支名与远程分支名的特殊情况 #####本">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
 
@@ -91,7 +92,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="yhzddy的程序屋" height="28">
+                <img src="/images/logo.svg" alt="git推送遇到的问题" height="28">
             
             </a>
         </div>
@@ -102,7 +103,7 @@
                 <a class="navbar-item"
                 href="/">主页</a>
                 
-                <a class="navbar-item is-active"
+                <a class="navbar-item"
                 href="/archives">归档</a>
                 
                 <a class="navbar-item"
@@ -141,50 +142,101 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
         
-<div class="card widget">
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-09-15T07:11:34.000Z">2019-09-15</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 276 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                git推送遇到的问题
+            
+        </h1>
+        <div class="content">
+            <p>####github无法推送的原因 </p>
+<p>该分支与远程从分支无相关联系 </p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.没给该分支设置上游远程节点    git branch --set-upstream-to=&lt;远程主机名&gt;/&lt;远程分支名&gt; &lt;本地分支名&gt;</span><br><span class="line"></span><br><span class="line">2.git的更新操作如果本地与远程大部分不一样，有合并冲突，需要先拉取合并，才能进行推送</span><br></pre></td></tr></table></figure>
+
+<p>####本地分支名与远程分支名的特殊情况</p>
+<p>#####本地分支名与远程分支名不同时候</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git push &lt;远程主机名&gt; &lt;本地分支名&gt;：&lt;远程分支名&gt;   </span><br><span class="line">若加-f 则强行本地覆盖</span><br></pre></td></tr></table></figure>
+
+<p>#####本地分支名和远程分支名相同时候<br>如果远程分支被省略，如上则表示将本地分支推送到与之存在追踪关系的远程分支（通常两者同名），如果该远程分支不存在，则会被新建</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push &lt;远程主机名&gt; &lt;本地分支名&gt;</span><br></pre></td></tr></table></figure>
+
+<p>#####tip：省略本地分支名，则表示删除指定的远程分支</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git push origin ：&lt;远程分支名&gt; </span><br><span class="line">git push origin</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
     <div class="card-content">
-        <h3 class="tag is-link">
-        2019
-        </h3>
-        <div class="timeline">
-        
-            <article class="media">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-09-15T07:11:34.000Z">2019-09-15</time>
-                        <a href="/2019/09/15/git推送遇到的问题/" class="title has-link-black-ter is-size-6 has-text-weight-normal">git推送遇到的问题</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="/images/zfbsk.jpg" alt="支付宝"></div>
+</a>
+
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-09-15T06:28:16.000Z">2019-09-15</time>
-                        <a href="/2019/09/15/git的常用命令/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Git的常用命令</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/wxsk.png" alt="微信"></div>
+</a>
+
+                
         </div>
     </div>
 </div>
 
-    
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/09/15/git的常用命令/">
+                <span class="level-item">Git的常用命令</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
 </div>
                 
 
@@ -542,7 +594,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="yhzddy的程序屋" height="28">
+                    <img src="/images/logo.svg" alt="git推送遇到的问题" height="28">
                 
                 </a>
                 <p class="is-size-7">
