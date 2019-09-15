@@ -190,19 +190,15 @@
         <div class="content">
             <p><strong>github无法推送的原因</strong></p>
 <p>该分支与远程从分支无相关联系 </p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">没给该分支设置上游远程节点    git branch --set-upstream-to=&lt;远程主机名&gt;/&lt;远程分支名&gt; &lt;本地分支名&gt;</span><br><span class="line"></span><br><span class="line">git的更新操作如果本地与远程大部分不一样，有合并冲突，需要先拉取合并，才能进行推送</span><br></pre></td></tr></table></figure>
+<pre><code>没给该分支设置上游远程节点    git branch --set-upstream-to=&lt;远程主机名&gt;/&lt;远程分支名&gt; &lt;本地分支名&gt;
 
-<p><strong>本地分支名与远程分支名的特殊情况</strong></p>
+git的更新操作如果本地与远程大部分不一样，有合并冲突，需要先拉取合并，才能进行推送</code></pre><p><strong>本地分支名与远程分支名的特殊情况</strong></p>
 <p>1.本地分支名与远程分支名不同时候</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git push &lt;远程主机名&gt; &lt;本地分支名&gt;：&lt;远程分支名&gt;   </span><br><span class="line">若加-f 则强行本地覆盖</span><br></pre></td></tr></table></figure>
-
-<p>2.本地分支名和远程分支名相同时候<br>如果远程分支被省略，如上则表示将本地分支推送到与之存在追踪关系的远程分支（通常两者同名），如果该远程分支不存在，则会被新建</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push &lt;远程主机名&gt; &lt;本地分支名&gt;</span><br></pre></td></tr></table></figure>
-
-<p>tip：省略本地分支名，则表示删除指定的远程分支</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git push origin ：&lt;远程分支名&gt; </span><br><span class="line">git push origin</span><br></pre></td></tr></table></figure>
-
-
+<pre><code>git push &lt;远程主机名&gt; &lt;本地分支名&gt;：&lt;远程分支名&gt;   
+若加-f 则强行本地覆盖</code></pre><p>2.本地分支名和远程分支名相同时候<br>如果远程分支被省略，如上则表示将本地分支推送到与之存在追踪关系的远程分支（通常两者同名），如果该远程分支不存在，则会被新建</p>
+<pre><code>git push &lt;远程主机名&gt; &lt;本地分支名&gt; </code></pre><p>tip：省略本地分支名，则表示删除指定的远程分支</p>
+<pre><code>git push origin ：&lt;远程分支名&gt; 
+git push origin </code></pre>
         </div>
         
         
@@ -239,7 +235,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分钟 读完 (大约 376 个字)
+                    3 分钟 读完 (大约 381 个字)
                 </span>
                 
                 
@@ -253,17 +249,45 @@
         </h1>
         <div class="content">
             <p><strong>git上传常用命令的基本流程</strong></p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init //初始化git仓库</span><br><span class="line">git add . //将文件提交到暂存区</span><br><span class="line">git commit -m &apos;说明&apos;</span><br><span class="line">git remote add [本地自定义远程仓库名] [远程仓库url]  //建立远程仓库</span><br><span class="line">git push &lt;远程主机名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt;</span><br></pre></td></tr></table></figure>
+<pre><code>git init //初始化git仓库
+git add . //将文件提交到暂存区
+git commit -m &apos;说明&apos;
+git remote add [本地自定义远程仓库名] [远程仓库url]  //建立远程仓库
+git push &lt;远程主机名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt;</code></pre><p><strong>拉取并合并</strong></p>
+<pre><code>git pull &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt; 
+git pull=git fetch +git merge </code></pre><p><strong>推送</strong></p>
+<pre><code>git push -u origin master //第一次将本地仓库推送到远程仓库
+git push  &lt;远程主机名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt;</code></pre><p><strong>总结</strong></p>
+<pre><code>git pull/push &lt;远程主机名&gt; &lt;源地址&gt;:&lt;目的地址&gt;</code></pre><p><strong>常用吗命令</strong></p>
+<pre><code>git ls-files //查看暂存区文件
 
-<p><strong>拉取并合并</strong></p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git pull &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt; </span><br><span class="line">git pull=git fetch +git merge</span><br></pre></td></tr></table></figure>
+git diff //查看暂存区前后不同
 
-<p><strong>推送</strong></p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master //第一次将本地仓库推送到远程仓库</span><br><span class="line">git push  &lt;远程主机名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt;</span><br></pre></td></tr></table></figure>
+git branch 分支名 //创建新的分支
 
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">总结: git pull/push &lt;远程主机名&gt; &lt;源地址&gt;:&lt;目的地址&gt;</span><br></pre></td></tr></table></figure>
+git branch //查看分支
 
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">git ls-files //查看暂存区文件</span><br><span class="line"></span><br><span class="line">git diff //查看暂存区前后不同</span><br><span class="line"></span><br><span class="line">git branch 分支名 //创建新的分支</span><br><span class="line"></span><br><span class="line">git branch //查看分支</span><br><span class="line"></span><br><span class="line">git branch -r //查看远程的分支名</span><br><span class="line"></span><br><span class="line">git branch --set-upstream-to=&lt;远程主机名&gt;/&lt;远程分支名&gt; &lt;本地分支名&gt; //给该分支设置上游远程节点</span><br><span class="line"></span><br><span class="line">git checkout -b 分支名  //创建新的分支并切换过去</span><br><span class="line"></span><br><span class="line">git checkout 分支名 //切换到该分支</span><br><span class="line"></span><br><span class="line">git init //初始化git仓库</span><br><span class="line"></span><br><span class="line">git add 文件名  //提交该文件</span><br><span class="line"></span><br><span class="line">git add . //提交仓库所有文件</span><br><span class="line"></span><br><span class="line">git commit -m &quot;注释&quot; //提交暂存区的文件到版本库 </span><br><span class="line"></span><br><span class="line">git remote add [本地自定义远程仓库名] [远程仓库url]  //建立远程仓库</span><br><span class="line"></span><br><span class="line">git clone &lt;远程仓库地址&gt;    //克隆该仓库的默认分支</span><br><span class="line"></span><br><span class="line">git clone -b 分支名 &lt;远程仓库地址&gt;   //克隆指定的分支</span><br></pre></td></tr></table></figure>
+git branch -r //查看远程的分支名
+
+git branch --set-upstream-to=&lt;远程主机名&gt;/&lt;远程分支名&gt; &lt;本地分支名&gt; //给该分支设置上游远程节点
+
+git checkout -b 分支名  //创建新的分支并切换过去
+
+git checkout 分支名 //切换到该分支
+
+git init //初始化git仓库
+
+git add 文件名  //提交该文件
+
+git add . //提交仓库所有文件
+
+git commit -m &quot;注释&quot; //提交暂存区的文件到版本库 
+
+git remote add [本地自定义远程仓库名] [远程仓库url]  //建立远程仓库
+
+git clone &lt;远程仓库地址&gt;    //克隆该仓库的默认分支
+
+git clone -b 分支名 &lt;远程仓库地址&gt;   //克隆指定的分支</code></pre>
         </div>
         
         
@@ -323,7 +347,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        2
+                        3
                     </p>
                 </div>
             </div>
@@ -343,7 +367,7 @@
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        1
+                        2
                     </p>
                 </div>
             </div>
@@ -426,7 +450,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/Git/" style="font-size: 10px;">Git</a>
+        <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/css/" style="font-size: 10px;">css</a>
     </div>
 </div>
 
@@ -440,6 +464,25 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/09/15/css记录/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/assets/hh.jpg" alt="css记录问题">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-15T14:32:56.000Z">2019-09-15</time></div>
+                    <a href="/2019/09/15/css记录/" class="title has-link-black-ter is-size-6 has-text-weight-normal">css记录问题</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -497,7 +540,7 @@
                     <span class="level-item">九月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -518,6 +561,13 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Git/">
                         <span class="tag">Git</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/css/">
+                        <span class="tag">css</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -547,6 +597,25 @@
         
         <article class="media">
             
+            <a href="/2019/09/15/css记录/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/assets/hh.jpg" alt="css记录问题">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-15T14:32:56.000Z">2019-09-15</time></div>
+                    <a href="/2019/09/15/css记录/" class="title has-link-black-ter is-size-6 has-text-weight-normal">css记录问题</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/09/15/git推送遇到的问题/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/assets/ee.jpg" alt="git推送遇到的问题">
@@ -601,7 +670,7 @@
                     <span class="level-item">九月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -622,6 +691,13 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Git/">
                         <span class="tag">Git</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/css/">
+                        <span class="tag">css</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
