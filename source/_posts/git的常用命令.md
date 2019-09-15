@@ -3,6 +3,7 @@ title: Git的常用命令
 date: 2019-09-15 14:28:16
 tags: Git
 categories: git
+thumbnail: /assets/gg.jpg
 ---
 
 

@@ -3,6 +3,7 @@ title: git推送遇到的问题
 date: 2019-09-15 15:11:34
 tags:
 categories: git
+thumbnail: /assets/ee.jpg
 ---
 
 **github无法推送的原因**
