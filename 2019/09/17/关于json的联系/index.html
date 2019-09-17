@@ -19,7 +19,7 @@
 <meta property="og:description" content="前因：有个需求json格式的多条数据，所以今天在公司里做一个Array bb = [{name，age}，{name，age}]这样的数据类型,我通过调用arrayObject.push(newelement1，newelement2，….，newelementX)，来进行数据填充。在console台中非常完美的显示出来了，但是在进行表单提交数据到服务器的时候，数据的格式非常奇怪。 这里我举一个例">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/assets/gg.jpg">
-<meta property="og:updated_time" content="2019-09-17T16:15:27.148Z">
+<meta property="og:updated_time" content="2019-09-17T16:31:00.654Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于json的联系">
 <meta name="twitter:description" content="前因：有个需求json格式的多条数据，所以今天在公司里做一个Array bb = [{name，age}，{name，age}]这样的数据类型,我通过调用arrayObject.push(newelement1，newelement2，….，newelementX)，来进行数据填充。在console台中非常完美的显示出来了，但是在进行表单提交数据到服务器的时候，数据的格式非常奇怪。 这里我举一个例">
@@ -223,7 +223,39 @@ JSON.parse(&apos;123.45&apos;); // 123.45</code></pre><p><strong>使用场景</s
 如果返回的时候传递了类型，比如就是Object，那么直接使用就好</code></pre><p>2.在页面间传递数据，特别是数组时</p>
 <pre><code>需要使用序列化，否则IE会报错：不能执行已经释放Script的代码</code></pre><p>3.在进行本地存储时</p>
 <pre><code>存储在本地window.localStorage.setItem(key,value)存储的value是json序列化的字符串；
-获取得到的window.localSorage.getItem(key)也是json序列化的字符串，需要经过json的反序列化进行使用（常见json序列化数组）</code></pre><p><strong>额外知识点</strong><br>类型|toString|<br>–|:–:|–:<br>Object          |   返回”[object Object]”<br>stringObject    |   返回字符串<br>NumberObject    |   把一个 Number 对象转换为一个字符串，并返回结果。<br>booleanObject    |   把一个逻辑值转换为字符串，并返回结果。<br>arrayObject        |   把数组转换为字符串，用逗号间隔，并返回结果<br>dateObject        |   把 Date 对象转换为字符串，并返回结果</p>
+获取得到的window.localSorage.getItem(key)也是json序列化的字符串，需要经过json的反序列化进行使用（常见json序列化数组）</code></pre><p><strong>额外知识点</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">类型</th>
+<th align="center">toString</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Object</td>
+<td align="center">返回”[object Object]”</td>
+</tr>
+<tr>
+<td align="center">stringObject</td>
+<td align="center">返回字符串</td>
+</tr>
+<tr>
+<td align="center">NumberObject</td>
+<td align="center">把一个 Number 对象转换为一个字符串，并返回结果。</td>
+</tr>
+<tr>
+<td align="center">booleanObject</td>
+<td align="center">把一个逻辑值转换为字符串，并返回结果。</td>
+</tr>
+<tr>
+<td align="center">arrayObject</td>
+<td align="center">把数组转换为字符串，用逗号间隔，并返回结果</td>
+</tr>
+<tr>
+<td align="center">dateObject</td>
+<td align="center">把 Date 对象转换为字符串，并返回结果</td>
+</tr>
+</tbody></table>
 <p>自定义对象调用js 的 toString 方法，返回的不是对象序列化后的字符串，而是 [object Object] 字符串。这是因为自定义对象没有重写 toString 方法。</p>
 <p>通过记录工作上的问题，学习知识，本文章的知识点来自网络上的各位前辈，仅作学习记录参考，感谢前辈们。<br>更多帮助请参考<a href="https://www.liaoxuefeng.com/wiki/1022910821149312/1023021554858080" target="_blank" rel="noopener">廖雪峰</a></p>
 
