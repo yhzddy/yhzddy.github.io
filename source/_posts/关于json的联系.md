@@ -93,14 +93,16 @@ thumbnail: /assets/gg.jpg
     获取得到的window.localSorage.getItem(key)也是json序列化的字符串，需要经过json的反序列化进行使用（常见json序列化数组）
 
 **额外知识点**
-类型|toString|
---|:--:|--:
-Object      	|   返回"[object Object]"
-stringObject	|   返回字符串
-NumberObject	|   把一个 Number 对象转换为一个字符串，并返回结果。
-booleanObject	|   把一个逻辑值转换为字符串，并返回结果。
-arrayObject	    |   把数组转换为字符串，用逗号间隔，并返回结果
-dateObject	    |   把 Date 对象转换为字符串，并返回结果
+
+
+|类型|toString|
+|:---:|:---:|
+|Object      	|   返回"[object Object]"|
+|stringObject	|   返回字符串|
+|NumberObject	|   把一个 Number 对象转换为一个字符串，并返回结果。|
+|booleanObject	|   把一个逻辑值转换为字符串，并返回结果。|
+|arrayObject	    |   把数组转换为字符串，用逗号间隔，并返回结果|
+|dateObject	    |   把 Date 对象转换为字符串，并返回结果|
 
 自定义对象调用js 的 toString 方法，返回的不是对象序列化后的字符串，而是 [object Object] 字符串。这是因为自定义对象没有重写 toString 方法。
 
