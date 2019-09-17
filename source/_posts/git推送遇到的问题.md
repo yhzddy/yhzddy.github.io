@@ -1,8 +1,8 @@
 ---
 title: git推送遇到的问题
 date: 2019-09-15 15:11:34
-tags:
-categories: git
+tags:Git
+categories: Git
 thumbnail: /assets/ee.jpg
 ---
 
