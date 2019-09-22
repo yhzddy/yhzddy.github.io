@@ -3,7 +3,7 @@ title: 关于json的联系
 date: 2019-09-17 22:01:37
 tags: json，对象序列化
 categories: javascript
-thumbnail: /assets/ee.jpg
+thumbnail: /assets/timg2.jpg
 ---
 
 前因：
