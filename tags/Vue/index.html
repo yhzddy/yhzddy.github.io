@@ -174,7 +174,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    6 分钟 读完 (大约 852 个字)
+                    6 分钟 读完 (大约 853 个字)
                 </span>
                 
                 
@@ -189,68 +189,17 @@
         <div class="content">
             <p>1.Vue的组件传递属性</p>
 <ol>
-<li>vue父亲组件传递值的使用<br> 父组件用到props给子组件传值，子组件只需要做一件事,那就是通过props接收<br> 父组件：<br> <img src="https://i.loli.net/2019/09/22/GJHdqLgwQbNx263.png" alt="v-bind传递值.png"><br> 子组件：<br> <img src="https://i.loli.net/2019/09/22/nNODIadwv9JzSmT.png" alt="props接受值.png"></li>
-<li>vue子组件传递值的使用<br> 子组件用到$emit给父组件响应，定义一个事件来触发响应的$emit使父组件可以知道有事件改变,进而接收对应的参数。<br> 子组件：<br> <img src="https://i.loli.net/2019/09/22/buI2tAFQklz4S8c.png" alt="子组件内定义事件.png"><br> <img src="https://i.loli.net/2019/09/22/XF2aoyEI7Jl5L9G.png" alt="$emit传递.png"><br> 父组件：<br> <img src="https://i.loli.net/2019/09/22/hGBCqr4Y7AkIRaK.png" alt="接受$emit的事件并定义方法.png"><br> <img src="https://i.loli.net/2019/09/22/zkBEKHL3d6NAsYt.png" alt="方法.png"></li>
-</ol>
-<p>2.Vuex的基础使用 </p>
-<ol>
-<li><p>store的使用</p>
-<pre><code>import Vue from &apos;vue&apos;
-import Vuex from &apos;vuex&apos;
-Vue.use(Vuex)
-export default new Vuex.Store({
-state: {
-    //state就是Vuex中的公共的状态, 可以将state看作是所有组件的data, 
-    用于保存所有组件的公共数据.
-},
-getters: {        
-    //
-    getters属性理解为所有组件的computed属性, 也就是计算属性. 
-    vuex的官方文档也是说到可以将getter理解为store的计算属性, getters的返回值会根据它的依赖被缓存起来，且只有
-    当它的依赖值发生了改变才会被重新计算。
-},
-mutations: {
-    //将mutaions理解为store中的methods, mutations对象中保存着更改数据回调函数,
-    该函数名官方规定叫type, 第一个参数是state, 第二参数是payload, 也就是自定义的参数.
-    注意:调用mutaions中回调函数, 只能使用store.commit(type, payload)
-},
-actions: {
-    //actions 类似于 mutations，不同在于：
-        actions提交的是mutations而不是直接变更状态
-        actions中可以包含异步操作, mutations中绝对不允许出现异步
-        actions中的回调函数的第一个参数是context, 是一个与store实例具有相同属性和方法的对象 
-        其中minusPriceAsync采用setTimeout来模拟异步操作,延迟2s执行 该方法用于异步改变我们刚才在mutaions中定义的minusPrice
-        调用actions中回调函数, 只能使用store.dispatch(type, payload)
-},
-modules: {
-//给全局变量分组，所以需要写提前声明其他store文件，然后引入这里
-Vuex 允许我们将 store 分割成模块（module）。每个模块拥有自己的 state、mutation、action、getter、甚至是嵌套子模块——从上至下进行同样方式的分割
- }
-})</code></pre></li>
-<li><p>watch和computed属性的使用例子</p>
-<pre><code>watch: {
-    caseId () {
-    this.personForm.caseId = this.caseId  
-    }
-},
-computed: {
-    caseId () {
-    return this.$store.state.common.caseId //拿到store的值
-    }
- },
-
- computed是计算属性，与data相似，但是具有缓存作用
- watch起到监听作用
- 该例子为监听缓存中过的caseId
- 该段落只做摘要，具体参考[这篇文章](https://blog.csdn.net/garfielder007/article/details/83721038)</code></pre></li>
-</ol>
-<p>3.mounted与created的区别</p>
-<pre><code>created:在模板渲染成html前调用，即通常初始化某些属性值，然后再渲染成视图。
-mounted:在模板渲染成html后调用，通常是初始化页面完成后，再对html的dom节点进行一些需要的操作。</code></pre><p>4.v-if与v-show</p>
-<pre><code>v-if改变dom结构
-v-show仅作视觉效果变化</code></pre>
+<li>vue父亲组件传递值的使用<br> 父组件用到props给子组件传值，子组件只需要做一件事,那就是通过props接收</li></ol>
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/09/22/vue的常用总结/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>

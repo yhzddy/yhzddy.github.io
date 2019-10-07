@@ -10,19 +10,19 @@
 <title>git推送遇到的问题 - yhzddy的程序屋</title>
 
 
-    <meta name="description" content="github无法推送的原因 该分支与远程从分支无相关联系  没给该分支设置上游远程节点    git branch --set-upstream-to=&amp;lt;远程主机名&amp;gt;/&amp;lt;远程分支名&amp;gt; &amp;lt;本地分支名&amp;gt;  git的更新操作如果本地与远程大部分不一样，有合并冲突，需要先拉取合并，才能进行推送本地分支名与远程分支名的特殊情况 1.本地分支名与远程分支名不同时候 git">
+    <meta name="description" content="github无法推送的原因 该分支与远程从分支无相关联系  没给该分支设置上游远程节点    git branch --set-upstream-to=&amp;lt;远程主机名&amp;gt;/&amp;lt;远程分支名&amp;gt; &amp;lt;本地分支名&amp;gt;  git的更新操作如果本地与远程大部分不一样，有合并冲突，需要先拉取合并，才能进行推送">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git推送遇到的问题">
 <meta property="og:url" content="http://yoursite.com/2019/09/15/git推送遇到的问题/index.html">
 <meta property="og:site_name" content="yhzddy的程序屋">
-<meta property="og:description" content="github无法推送的原因 该分支与远程从分支无相关联系  没给该分支设置上游远程节点    git branch --set-upstream-to=&amp;lt;远程主机名&amp;gt;/&amp;lt;远程分支名&amp;gt; &amp;lt;本地分支名&amp;gt;  git的更新操作如果本地与远程大部分不一样，有合并冲突，需要先拉取合并，才能进行推送本地分支名与远程分支名的特殊情况 1.本地分支名与远程分支名不同时候 git">
+<meta property="og:description" content="github无法推送的原因 该分支与远程从分支无相关联系  没给该分支设置上游远程节点    git branch --set-upstream-to=&amp;lt;远程主机名&amp;gt;/&amp;lt;远程分支名&amp;gt; &amp;lt;本地分支名&amp;gt;  git的更新操作如果本地与远程大部分不一样，有合并冲突，需要先拉取合并，才能进行推送">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/assets/ee.jpg">
-<meta property="og:updated_time" content="2019-09-17T16:53:13.610Z">
+<meta property="og:updated_time" content="2019-10-07T05:37:53.993Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git推送遇到的问题">
-<meta name="twitter:description" content="github无法推送的原因 该分支与远程从分支无相关联系  没给该分支设置上游远程节点    git branch --set-upstream-to=&amp;lt;远程主机名&amp;gt;/&amp;lt;远程分支名&amp;gt; &amp;lt;本地分支名&amp;gt;  git的更新操作如果本地与远程大部分不一样，有合并冲突，需要先拉取合并，才能进行推送本地分支名与远程分支名的特殊情况 1.本地分支名与远程分支名不同时候 git">
+<meta name="twitter:description" content="github无法推送的原因 该分支与远程从分支无相关联系  没给该分支设置上游远程节点    git branch --set-upstream-to=&amp;lt;远程主机名&amp;gt;/&amp;lt;远程分支名&amp;gt; &amp;lt;本地分支名&amp;gt;  git的更新操作如果本地与远程大部分不一样，有合并冲突，需要先拉取合并，才能进行推送">
 <meta name="twitter:image" content="http://yoursite.com/assets/ee.jpg">
 
 
@@ -165,7 +165,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 276 个字)
+                    2 分钟 读完 (大约 277 个字)
                 </span>
                 
                 
@@ -182,7 +182,10 @@
 <p>该分支与远程从分支无相关联系 </p>
 <pre><code>没给该分支设置上游远程节点    git branch --set-upstream-to=&lt;远程主机名&gt;/&lt;远程分支名&gt; &lt;本地分支名&gt;
 
-git的更新操作如果本地与远程大部分不一样，有合并冲突，需要先拉取合并，才能进行推送</code></pre><p><strong>本地分支名与远程分支名的特殊情况</strong></p>
+git的更新操作如果本地与远程大部分不一样，有合并冲突，需要先拉取合并，才能进行推送</code></pre><a id="more"></a>
+
+
+<p><strong>本地分支名与远程分支名的特殊情况</strong></p>
 <p>1.本地分支名与远程分支名不同时候</p>
 <pre><code>git push &lt;远程主机名&gt; &lt;本地分支名&gt;：&lt;远程分支名&gt;   
 若加-f 则强行本地覆盖</code></pre><p>2.本地分支名和远程分支名相同时候<br>如果远程分支被省略，如上则表示将本地分支推送到与之存在追踪关系的远程分支（通常两者同名），如果该远程分支不存在，则会被新建</p>

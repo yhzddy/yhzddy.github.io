@@ -175,7 +175,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 227 个字)
+                    2 分钟 读完 (大约 228 个字)
                 </span>
                 
                 
@@ -189,47 +189,16 @@
         </h1>
         <div class="content">
             <p>这里我碰到的一个需求是添加多个电话,所以我猜想用到了push数组，刚好el-element里面有用到动态增减表单项的组件<br>查看源码，添加则是push一个空数组</p>
-<pre><code>data() {
-  return {
-    dynamicValidateForm: {
-      domains: [{
-        value: &apos;&apos;
-      }],
-      email: &apos;&apos;
-    }
-  };
-
-addDomain() {
-    this.dynamicValidateForm.domains.push({
-      value: &apos;&apos;,
-      key: Date.now()
-    });</code></pre><p>删除则splice(index, 1)并返回一个删除后的数组</p>
-<pre><code>removeDomain(item) {
-   var index = this.dynamicValidateForm.domains.indexOf(item)
-   if (index !== -1) {
-     this.dynamicValidateForm.domains.splice(index, 1)
-   }
- },
-
- 关于数组的方法push和splice使用差不多，
- push() 方法可向数组的末尾添加一个或多个元素，并返回新的数组。
- arr.push(newelement1,newelement2,....,newelementX)
-
- splice不仅可以删除，还可以进行添加，返回新的数组
- splice 是数组的一个方法，使用这个方法会改变原来的数组结构，
- arr.splice（index ，howmany ， itemX）；</code></pre><p>复合型输入框的使用</p>
-<pre><code> &lt;div style=&quot;margin-top: 15px;&quot;&gt;
-    &lt;el-input placeholder=&quot;请输入内容&quot; v-model=&quot;input3&quot; class=&quot;input-with-select&quot;&gt;
-      &lt;el-select v-model=&quot;select&quot; slot=&quot;prepend&quot; placeholder=&quot;请选择&quot;&gt;
-         &lt;el-option label=&quot;餐厅名&quot; value=&quot;1&quot;&gt;&lt;/el-option&gt;
-         &lt;el-option label=&quot;订单号&quot; value=&quot;2&quot;&gt;&lt;/el-option&gt;
-         &lt;el-option label=&quot;用户电话&quot; value=&quot;3&quot;&gt;&lt;/el-option&gt;
-      &lt;/el-select&gt;
-          &lt;el-button slot=&quot;append&quot; icon=&quot;el-icon-search&quot;&gt;&lt;/el-button&gt;
-   &lt;/el-input&gt;
-&lt;/div&gt;</code></pre>
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/09/22/el-element复合型输入框和动态删减框/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
@@ -264,7 +233,7 @@ addDomain() {
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 193 个字)
+                    1 分钟 读完 (大约 194 个字)
                 </span>
                 
                 
@@ -293,58 +262,17 @@ addDomain() {
                  {},
                  {}
               ]
-        }</code></pre><p>由于el-table :data=”tableData”中的：data需要的数据类型是数组</p>
-<pre><code>这里我我将返回的数据push进tableData数组
- data(){
-     return{
-          tableData: []
-     }
- }
-
- methods:{
-     this.tableData.push(res.data)
-}
-
-这样就是tableData[{
-    [
-        {},
-        {}
-    ],
-    [
-        {},
-        {}
-    ]
-}]</code></pre><p>但是考虑里里面数据的复杂性，不能像之前直接使用，在el-table-column中用prop属性来对应对象中的键名即可填入数据。</p>
-<pre><code> 官方文档的数据形式
- tableData: [{
-        date: &apos;2016-05-02&apos;,
-        name: &apos;王小虎&apos;,
-        address: &apos;上海市普陀区金沙江路 1518 弄&apos;
-      }, {
-        date: &apos;2016-05-04&apos;,
-        name: &apos;王小虎&apos;,
-        address: &apos;上海市普陀区金沙江路 1517 弄&apos;
-      }
-
-&lt;el-table-column
-    prop=&quot;date&quot;
-    label=&quot;日期&quot;
-    width=&quot;180&quot;&gt;
-&lt;/el-table-column&gt;</code></pre><p>所以我们这里要用到solt插件和v-for循环</p>
-<pre><code>&lt;el-table-column label=&quot;ID号码&quot;&gt;
-  &lt;template slot-scope=&quot;scope&quot;&gt;
-    &lt;div&gt;{{scope.row.PersonInfo.id_card}}&lt;/div&gt;
-  &lt;/template&gt;
-&lt;/el-table-column&gt;
-&lt;el-table-column label=&quot;联系电话&quot;&gt;
-  &lt;template slot-scope=&quot;scope&quot;&gt;
-    &lt;div v-for=&quot; (item,personDataId) in scope.row.Phone&quot; :key=&quot;personDataId&quot;&gt;
-      &lt;span&gt;{{item.phone_number}}&lt;/span&gt;
-    &lt;/div&gt;
-  &lt;/template&gt;
-&lt;/el-table-column&gt;</code></pre>
+        }</code></pre>
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/09/22/el-element的的表格填充数据/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>

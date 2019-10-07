@@ -174,7 +174,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 193 个字)
+                    1 分钟 读完 (大约 194 个字)
                 </span>
                 
                 
@@ -203,58 +203,17 @@
                  {},
                  {}
               ]
-        }</code></pre><p>由于el-table :data=”tableData”中的：data需要的数据类型是数组</p>
-<pre><code>这里我我将返回的数据push进tableData数组
- data(){
-     return{
-          tableData: []
-     }
- }
-
- methods:{
-     this.tableData.push(res.data)
-}
-
-这样就是tableData[{
-    [
-        {},
-        {}
-    ],
-    [
-        {},
-        {}
-    ]
-}]</code></pre><p>但是考虑里里面数据的复杂性，不能像之前直接使用，在el-table-column中用prop属性来对应对象中的键名即可填入数据。</p>
-<pre><code> 官方文档的数据形式
- tableData: [{
-        date: &apos;2016-05-02&apos;,
-        name: &apos;王小虎&apos;,
-        address: &apos;上海市普陀区金沙江路 1518 弄&apos;
-      }, {
-        date: &apos;2016-05-04&apos;,
-        name: &apos;王小虎&apos;,
-        address: &apos;上海市普陀区金沙江路 1517 弄&apos;
-      }
-
-&lt;el-table-column
-    prop=&quot;date&quot;
-    label=&quot;日期&quot;
-    width=&quot;180&quot;&gt;
-&lt;/el-table-column&gt;</code></pre><p>所以我们这里要用到solt插件和v-for循环</p>
-<pre><code>&lt;el-table-column label=&quot;ID号码&quot;&gt;
-  &lt;template slot-scope=&quot;scope&quot;&gt;
-    &lt;div&gt;{{scope.row.PersonInfo.id_card}}&lt;/div&gt;
-  &lt;/template&gt;
-&lt;/el-table-column&gt;
-&lt;el-table-column label=&quot;联系电话&quot;&gt;
-  &lt;template slot-scope=&quot;scope&quot;&gt;
-    &lt;div v-for=&quot; (item,personDataId) in scope.row.Phone&quot; :key=&quot;personDataId&quot;&gt;
-      &lt;span&gt;{{item.phone_number}}&lt;/span&gt;
-    &lt;/div&gt;
-  &lt;/template&gt;
-&lt;/el-table-column&gt;</code></pre>
+        }</code></pre>
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/09/22/el-element的的表格填充数据/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
