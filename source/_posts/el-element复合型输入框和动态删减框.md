@@ -7,7 +7,7 @@ thumbnail: /assets/dd.jpg
 ---
 这里我碰到的一个需求是添加多个电话,所以我猜想用到了push数组，刚好el-element里面有用到动态增减表单项的组件
 查看源码，添加则是push一个空数组
-
+<!-- more -->
     data() {
       return {
         dynamicValidateForm: {

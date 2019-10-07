@@ -11,6 +11,7 @@ thumbnail: /assets/timg.jpg
 
 1. vue父亲组件传递值的使用
     父组件用到props给子组件传值，子组件只需要做一件事,那就是通过props接收
+    <!-- more -->
     父组件：
     ![v-bind传递值.png](https://i.loli.net/2019/09/22/GJHdqLgwQbNx263.png)
     子组件：

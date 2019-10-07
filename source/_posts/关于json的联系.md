@@ -8,7 +8,7 @@ thumbnail: /assets/timg2.jpg
 
 前因：
 有个需求json格式的多条数据，所以今天在公司里做一个Array bb = [{name，age}，{name，age}]这样的数据类型,我通过调用arrayObject.push(newelement1，newelement2，....，newelementX)，来进行数据填充。在console台中非常完美的显示出来了，但是在进行表单提交数据到服务器的时候，数据的格式非常奇怪。
-
+<!-- more -->
     这里我举一个例子 shuzu = []，key ：value格式。shuzu ： bb 这时候上传的数据格式应该是shuzhu: [[0],[1],....,[X]],可是在数据被服务器拒绝。
     经过排查，在http报文请求参数Form Data发现数据格式为shuzhu[0].name,shu[0].age,shu[1],name.shuzu[1].age
     理想情况name和age属性应该一个值，而不应该是分散的。

@@ -14,7 +14,7 @@ thumbnail: /assets/gg.jpg
         git commit -m '说明'
         git remote add [本地自定义远程仓库名] [远程仓库url]  //建立远程仓库
         git push <远程主机名> <本地分支名>:<远程分支名>
-
+<!-- more -->
 
 **拉取并合并**
 
