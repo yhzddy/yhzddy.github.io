@@ -12,17 +12,18 @@ thumbnail: /assets/timg.jpg
 1. vue父亲组件传递值的使用
     父组件用到props给子组件传值，子组件只需要做一件事,那就是通过props接收
     父组件：
-    ![10775147-f463d4511d501120.png](https://i.loli.net/2019/09/22/GJHdqLgwQbNx263.png)
+    ![v-bind传递值.png](https://i.loli.net/2019/09/22/GJHdqLgwQbNx263.png)
     子组件：
-    ![10775147-f0e970afe93891e4.png](https://i.loli.net/2019/09/22/nNODIadwv9JzSmT.png)
+    ![props接受值.png](https://i.loli.net/2019/09/22/nNODIadwv9JzSmT.png)
 2. vue子组件传递值的使用
     子组件用到$emit给父组件响应，定义一个事件来触发响应的$emit使父组件可以知道有事件改变,进而接收对应的参数。
-    父组件：
-    ![10775147-f4bbc44393321a26.png](https://i.loli.net/2019/09/22/hGBCqr4Y7AkIRaK.png)
-    ![10775147-00dd4916b775bb8b.png](https://i.loli.net/2019/09/22/zkBEKHL3d6NAsYt.png)
     子组件：
-    ![10775147-d7ff29acbaa3d652.png](https://i.loli.net/2019/09/22/buI2tAFQklz4S8c.png)
-    ![10775147-4d666ddfc4c163d3.png](https://i.loli.net/2019/09/22/XF2aoyEI7Jl5L9G.png)
+    ![子组件内定义事件.png](https://i.loli.net/2019/09/22/buI2tAFQklz4S8c.png)
+    ![$emit传递.png](https://i.loli.net/2019/09/22/XF2aoyEI7Jl5L9G.png)
+    父组件：
+    ![接受$emit的事件并定义方法.png](https://i.loli.net/2019/09/22/hGBCqr4Y7AkIRaK.png)
+    ![方法.png](https://i.loli.net/2019/09/22/zkBEKHL3d6NAsYt.png)
+
 
 2.Vuex的基础使用 
 1. store的使用
